@@ -25,7 +25,8 @@
 .hero__right {
   position: absolute;
   top: -1176px;
-  left: -21%;
+  left: calc(100vw / 2 + 62px);
+  transform: translateX(-38%);
   z-index: -1;
   width: 2560px;
   height: 2697px;
@@ -137,4 +138,9 @@
   box-shadow: 0 0 6px 0 #5cebff, 0 0 12px 0 #5cebff, 0 0 42px 0 #5cebff,
     0 0 254px 0 #5cebff;
   background: #12002a, rgba(92, 235, 255, 0.55), rgba(64, 0, 169, 0.4), #4000a9;
+}
+
+@media screen and (min-width: 1281px) {
+  .hero__right {
+  }
 }
