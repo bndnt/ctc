@@ -1,0 +1,46 @@
+/* Color variables */
+:root {
+  --bacgr: #0d020d;
+  -webkit-text-size-adjust: 100%;
+  --pink: #f09;
+  --aqua: #5cebff;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: var(--bacgr);
+  color: white;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+  transition: all 250ms linear;
+}
+button,
+a {
+  cursor: pointer;
+}
+
+/* General mobile styles */
+.container {
+  width: 100%;
+  max-width: 1094px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 375px) {
+}
+
+/* General tablet styles */
+
+@media screen and (min-width: 768px) {
+}
+
+/* General desktop styles */
+@media screen and (min-width: 1280px) {
+}
