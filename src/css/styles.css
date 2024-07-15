@@ -7,6 +7,7 @@
 @import url('./reset.css');
 @import url('./general.css');
 @import url('./header.css');
+@import url('./footer.css');
 .container__top {
   width: 100%;
   max-width: 1234px;
@@ -16,7 +17,7 @@
 }
 .body__wrapper {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .hero {
   padding: 28px 0 0;
@@ -78,11 +79,12 @@
   width: 257px;
 }
 .list {
-  margin-top: 42px;
+  margin-top: 45px;
   display: flex;
   justify-content: center;
   gap: 28px;
   flex-wrap: wrap;
+  padding-bottom: 139px;
 }
 .item {
   width: 299px;
@@ -91,8 +93,31 @@
   border-radius: 16px;
   position: relative;
 }
+.all-sections {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.all-sections::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: -36%;
+  left: -128%;
+  width: 5096px;
+  height: 10872px;
+  background-image: url(../svg/bg-noms.svg);
+  z-index: -6;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.25;
+}
+.nomination:last-child .list {
+  padding-bottom: 0;
+}
 .nomination__title {
   text-align: center;
+  margin-top: 8px;
 }
 .item__image {
   width: 165px;
@@ -138,6 +163,56 @@
   box-shadow: 0 0 6px 0 #5cebff, 0 0 12px 0 #5cebff, 0 0 42px 0 #5cebff,
     0 0 254px 0 #5cebff;
   background: #12002a, rgba(92, 235, 255, 0.55), rgba(64, 0, 169, 0.4), #4000a9;
+}
+.vote {
+  padding: 112px 0 104px;
+  position: relative;
+}
+.vote::after {
+  position: absolute;
+  display: block;
+  content: '';
+  right: calc(100% / 10 - 19%);
+  left: auto;
+  top: 119px;
+  width: 433px;
+  height: 493px;
+  background-image: url(../svg/vote-right.svg);
+  z-index: -1;
+}
+.vote::before {
+  position: absolute;
+  display: block;
+  content: '';
+  left: calc(100% / 10 - 20%);
+  top: 131px;
+  width: 405px;
+  height: 441px;
+  background-image: url(../svg/vote__left.svg);
+  z-index: -1;
+}
+.vote__text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.06;
+  color: #fff;
+  margin-top: 16px;
+  text-align: center;
+}
+.vote__btn {
+  font-family: 'Montserrat', sans-serif;
+
+  display: block;
+  margin: 51px auto 0;
+  border-radius: 14px;
+  padding: 15px 50px;
+  width: 303px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1;
+  text-align: center;
+  color: var(--bacgr);
+  background-color: var(--aqua);
 }
 
 @media screen and (min-width: 1281px) {
