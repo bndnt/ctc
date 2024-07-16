@@ -1,17 +1,28 @@
-const anchors = document.querySelectorAll('a[href*="#"]');
-
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
+document
+  .querySelector('#mobile_menu_toggle')
+  .addEventListener('click', function (e) {
     e.preventDefault();
+    this.classList.toggle('active');
+    document.querySelector('.mobile__menu').classList.toggle('active');
 
-    const blockID = anchor.getAttribute('href').substr(1);
-
-    document.getElementById('anchor').scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+    document.querySelector('.top__hamburger').classList.toggle('active');
+    document.body.classList.toggle('hidden');
   });
-}
+
+// const anchors = document.querySelectorAll('a[href*="#"]');
+
+// for (let anchor of anchors) {
+//   anchor.addEventListener('click', function (e) {
+//     e.preventDefault();
+
+//     const blockID = anchor.getAttribute('href').substr(1);
+
+//     document.getElementById('anchor').scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start',
+//     });
+//   });
+// }
 
 document.querySelectorAll('.list').forEach(list => {
   list.querySelectorAll('input[type="radio"]').forEach(radio => {
@@ -37,13 +48,23 @@ document.querySelectorAll('.list').forEach(list => {
     });
   });
 });
-document
-  .querySelector('#mobile_menu_toggle')
-  .addEventListener('click', function (e) {
-    e.preventDefault();
-    this.classList.toggle('active');
-    document.querySelector('.mobile__menu').classList.toggle('active');
 
-    document.querySelector('.top__hamburger').classList.toggle('active');
-    document.body.classList.toggle('hidden');
+document.querySelectorAll('a[href^="#"').forEach(link => {
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    let href = this.getAttribute('href').substring(1);
+
+    const scrollTarget = document.getElementById(href);
+
+    const topOffset = document.querySelector('.js-hero__btn').offsetHeight;
+    // const topOffset = 0; // если не нужен отступ сверху
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - topOffset;
+
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
   });
+});
