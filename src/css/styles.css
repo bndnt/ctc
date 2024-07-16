@@ -517,6 +517,10 @@
     padding: 11px 11px 13px 10px;
     position: relative;
   }
+  .header__container {
+    backdrop-filter: blur(53px);
+    background: rgba(255, 0, 214, 0.1);
+  }
   .header__logo {
     width: 117px;
     height: 28px;
