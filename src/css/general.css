@@ -20,6 +20,14 @@ body {
 body.hidden {
   overflow: hidden;
 }
+.js-body-wrapper {
+  overflow: auto;
+}
+.js-body-wrapper.hidden {
+  overflow: hidden !important;
+  width: 100vw;
+  height: 100vh;
+}
 * {
   box-sizing: border-box;
   transition: all 250ms linear;

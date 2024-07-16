@@ -1,0 +1,151 @@
+.merci-block {
+  background-image: url(../svg/merci-bg.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 28px 0 0;
+}
+.merci-container {
+  margin: 0 auto;
+  padding: 0 15px 0 22px;
+  width: 100%;
+  max-width: 884px;
+}
+.merci__flex {
+  margin-top: 38px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 49px;
+  padding: 0 7px 0 0;
+}
+.merci-date__top {
+  display: flex;
+  align-items: flex-end;
+}
+.merci-date {
+  margin-top: 4px;
+}
+.merci__number {
+}
+.merci__logo {
+  width: 142px;
+  height: 67px;
+}
+.merci__logo svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.merci__title {
+  font-weight: 900;
+  font-size: 63px;
+  line-height: 1.06;
+  text-transform: uppercase;
+  color: #fff;
+}
+.merci__text {
+  margin: 19px 0 63px;
+  font-weight: 500;
+  font-size: 22px;
+  color: #fff;
+}
+.merci__btn {
+  display: block;
+  border-radius: 14px;
+  padding: 15px 50px;
+  width: 267px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1;
+  text-align: center;
+  color: var(--pink);
+  transition: all 250ms linear;
+  background-color: white;
+}
+.merci__image {
+  width: 985px;
+  height: 492px;
+  margin-top: -67px;
+  /* margin: -50px auto; */
+  margin-left: -105px;
+}
+.merci__image svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.footer-merci {
+  margin-top: -140px;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .merci-block {
+    padding-top: 7px;
+  }
+  .merci-container {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .merci-date__top {
+    width: 69px;
+    height: 45px;
+  }
+  .merci__logo {
+    display: none;
+  }
+  .merci__title {
+    font-size: 26px;
+    line-height: 1.06;
+    margin-top: 110px;
+    max-width: 90%;
+  }
+  .merci__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.24;
+    margin: 17px 0 31px;
+  }
+  .merci__btn {
+    width: 100%;
+  }
+  .merci-info__cover {
+    margin-top: -253px;
+  }
+  .merci__image {
+    margin-top: 0;
+  }
+  .footer-merci {
+    margin-top: 0;
+  }
+  .merci-block {
+    background-image: none;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 109px;
+  }
+  .merci-block:before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 2038px;
+    height: 2187px;
+    background-image: url(../svg/merci-bg-mob.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    z-index: -1;
+    left: -1146px;
+    top: -416px;
+  }
+  .merci__image {
+    width: 305px;
+    height: 234px;
+    margin-left: -7px;
+    margin-top: -2px;
+  }
+  .merci__btn {
+    font-size: 16px;
+  }
+}

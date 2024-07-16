@@ -61,6 +61,7 @@ header {
   display: none;
 }
 .mobile__menu.active {
+  position: fixed;
 }
 .mobile__menu a {
   display: flex;
@@ -108,18 +109,22 @@ header {
 
 .top__hamburger {
   position: fixed;
-  top: 0;
+  bottom: 100%;
+  top: -100%;
   left: 0;
   backdrop-filter: blur(53px);
-  background: rgba(255, 0, 214, 0.1);
+  display: block;
   width: 100vw;
-  height: 100vh;
+  height: 0;
   z-index: 3;
   padding: 120px 38px 20px;
-  display: none;
+  transition: all 0.3s linear;
 }
 .top__hamburger.active {
-  display: block;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 0, 214, 0.1);
 }
 .top__hamburger ul {
   margin: 0 auto;
@@ -133,6 +138,12 @@ header {
   line-height: 1.55;
   text-align: center;
   color: #fff;
+}
+.top__hamburger-cover {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media screen and (max-width: 991px) {
   .mobile__menu {
