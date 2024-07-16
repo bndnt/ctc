@@ -68,6 +68,8 @@
   margin-top: -67px;
   /* margin: -50px auto; */
   margin-left: -105px;
+  z-index: -1;
+  position: relative;
 }
 .merci__image svg {
   width: 100%;
