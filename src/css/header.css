@@ -62,6 +62,7 @@ header {
 }
 .mobile__menu.active {
   position: fixed;
+  top: 20px;
 }
 .mobile__menu a {
   display: flex;
@@ -143,7 +144,10 @@ header {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+}
+.top__hamburger-cover .header__link {
+  margin-top: 67px;
 }
 @media screen and (max-width: 991px) {
   .mobile__menu {

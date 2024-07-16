@@ -514,6 +514,10 @@
     top: 22px;
     right: 11px;
   }
+  .mobile__menu.active {
+    top: 51px;
+    right: 34px;
+  }
   .container__top {
     padding: 11px 11px 13px 10px;
     position: relative;
