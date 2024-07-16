@@ -575,6 +575,10 @@
   .footer__logo {
     margin: 0 auto 342px;
   }
+  .vote .nomination__title {
+    width: 100%;
+    max-width: 249px;
+  }
   .footer__right {
     align-items: center;
     flex-direction: column-reverse;
