@@ -13,6 +13,8 @@ header {
 .header__logo {
   width: 171px;
   height: 42px;
+  position: relative;
+  z-index: 6;
 }
 .header__logo img {
   width: 100%;
@@ -47,4 +49,96 @@ header {
   border-radius: 13px;
   padding: 8px 37px 9px 37px;
   background-color: white;
+}
+
+/* hamb */
+.mobile__menu {
+  position: absolute;
+  z-index: 6;
+  top: 48px;
+  left: auto;
+  right: 38px;
+  display: none;
+}
+.mobile__menu.active {
+}
+.mobile__menu a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.mobile__menu a span {
+  background: white;
+  border-radius: 2px;
+  height: 2px;
+}
+.mobile__menu a span:nth-child(1) {
+  width: 28px;
+  display: block;
+  transition: ease 300ms;
+}
+
+.mobile__menu a.active span:nth-child(1) {
+  transform: rotate(45deg);
+  position: absolute;
+  transition: 300ms;
+}
+
+.mobile__menu a span:nth-child(2) {
+  width: 16px;
+  display: block;
+  margin: 8px 0;
+}
+
+.mobile__menu a.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile__menu a span:nth-child(3) {
+  width: 28px;
+  display: block;
+  transition: 300ms;
+}
+
+.mobile__menu a.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: absolute;
+  transition: 300ms;
+}
+
+.top__hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(53px);
+  background: rgba(255, 0, 214, 0.1);
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  padding: 120px 38px 20px;
+  display: none;
+}
+.top__hamburger.active {
+  display: block;
+}
+.top__hamburger ul {
+  margin: 0 auto;
+}
+.top__hamburger ul li {
+  padding: 25px 0;
+  text-align: center;
+}
+.top__hamburger ul li a {
+  font-size: 16px;
+  line-height: 1.55;
+  text-align: center;
+  color: #fff;
+}
+@media screen and (max-width: 991px) {
+  .mobile__menu {
+    display: block;
+  }
+  .header__right {
+    display: none;
+  }
 }
