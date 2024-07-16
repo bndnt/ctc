@@ -13,42 +13,62 @@
     <title>ctc</title>
     
     <script type="module" crossorigin src="/ctc/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/ctc/assets/index-ce755253.css">
+    <link rel="stylesheet" href="/ctc/assets/index-8075c08d.css">
   </head>
   <body>
     <div class="body__wrapper">
       <div class="hero__right">
-        <img src="/ctc/assets/svg_web_hero-c3f7b8b4.svg" alt="img" />
+        <!-- <img src="./svg/svg_web_hero.svg" alt="img" /> -->
+        <picture>
+          <source media="(max-width: 991px)" srcset="/ctc/assets/svg_mob_hero-5e11e860.svg " />
+          <source media="(min-width: 991px)" srcset="/ctc/assets/svg_web_hero-c3f7b8b4.svg " />
+          <img src="/ctc/assets/svg_web_hero-c3f7b8b4.svg" alt="img" />
+        </picture>
       </div>
       <section style="overflow-x: hidden" class="hero">
         <div class="section__wrapper">
+          <div class="header__mobile mobile__menu">
+            <a id="mobile_menu_toggle" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </div>
+          <div class="top__hamburger">
+            <ul>
+              <li><a href="#">ведущие</a></li>
+              <li><a href="#"> контакты</a></li>
+              <li><a href="#">партнёры</a></li>
+            </ul>
+            <a href="#" class="header__link">КУПИТЬ БИЛЕТЫ</a>
+          </div>
           <header class="header">
-  <div class="header__wrapper">
-    <div class="header__container container__top">
-      <nav class="nav">
-        <div class="header__logo">
-          <a href="/">
-            <img src="/ctc/assets/logo-d866b50e.svg" alt="logo" />
-          </a>
-        </div>
-        <div class="header__right">
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a href="#" class="nav-link">ведущие</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">контакты</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">партнёры</a>
-            </li>
-          </ul>
-          <a href="#" class="header__link">КУПИТЬ БИЛЕТЫ</a>
-        </div>
-      </nav>
-    </div>
-  </div>
-</header>
+            <div class="header__wrapper">
+              <div class="header__container container__top">
+                <nav class="nav">
+                  <div class="header__logo">
+                    <a href="/">
+                      <img src="/ctc/assets/logo-d866b50e.svg" alt="logo" />
+                    </a>
+                  </div>
+                  <div class="header__right">
+                    <ul class="nav-list">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">ведущие</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">контакты</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">партнёры</a>
+                      </li>
+                    </ul>
+                    <a href="#" class="header__link">КУПИТЬ БИЛЕТЫ</a>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </header>
 
           <div class="container__top">
             <div class="hero__flex">
@@ -59,7 +79,7 @@
                 <p class="hero__text">
                   Результаты будут объявлены 19 октября 2024 года
                 </p>
-                <a href="#anchor" class="hero__btn">ГЛОСОВАТЬ</a>
+                <a href="#anchor" class="hero__btn">ГОЛОСОВАТЬ</a>
               </div>
             </div>
           </div>
@@ -69,7 +89,7 @@
         <form action="">
           <div class="container">
             <div class="nominations">
-              <div class="nomination">
+              <div class="nomination lubimka">
                 <h4 class="subtitle">номинация</h4>
                 <h1 class="title__first nomination__title">любимка года</h1>
                 <ul class="list">
@@ -187,7 +207,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="nomination">
+              <div class="nomination artist">
                 <h4 class="subtitle">номинация</h4>
                 <h1 class="title__first nomination__title">Артист года</h1>
                 <ul class="list">
@@ -423,7 +443,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="nomination">
+              <div class="nomination clip">
                 <h4 class="subtitle">номинация</h4>
                 <h1 class="title__first nomination__title">Лучший клип</h1>
                 <ul class="list">
@@ -541,7 +561,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="nomination">
+              <div class="nomination collab">
                 <h4 class="subtitle">номинация</h4>
                 <h1 class="title__first nomination__title">Коллаб года</h1>
                 <ul class="list">
