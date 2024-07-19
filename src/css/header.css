@@ -39,6 +39,9 @@ header {
   text-align: center;
   color: #fff;
 }
+.nav-item a:hover {
+  color: var(--pink);
+}
 .header__link {
   font-weight: 700;
   font-size: 14px;
@@ -49,6 +52,11 @@ header {
   border-radius: 13px;
   padding: 8px 37px 9px 37px;
   background-color: white;
+}
+
+.header__link:hover {
+  background-color: var(--pink);
+  color: white;
 }
 
 /* hamb */
@@ -144,6 +152,7 @@ header {
   text-align: center;
   color: #fff;
 }
+
 .top__hamburger-cover {
   height: 100%;
   display: flex;
