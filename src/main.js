@@ -4,6 +4,7 @@ document
     e.preventDefault();
     this.classList.toggle('active');
     document.querySelector('.mobile__menu').classList.toggle('active');
+    document.querySelector('.bg-popup').classList.toggle('active');
 
     document.querySelector('.top__hamburger').classList.toggle('active');
     document.body.classList.toggle('hidden');
