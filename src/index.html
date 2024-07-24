@@ -15,6 +15,27 @@
   </head>
   <body>
     <div class="bg-popup"></div>
+    <div class="js-send send">
+      <div class="send__wrapper">
+        <div class="send__contrainer">
+          <div class="send__block">
+            <div class="send__hearts">
+              <img
+                class="send__heart send__heart-1 pulse-1"
+                src="./svg/heart-pink.svg"
+                alt="img"
+              />
+              <img
+                class="send__heart send__heart-2 pulse-2"
+                src="./svg/heart-shad.svg"
+                alt="img"
+              />
+            </div>
+            <p class="send__text">Отправляем твой голос...</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="body__wrapper">
       <div class="header__mobile mobile__menu">
         <a id="mobile_menu_toggle" href="#">
@@ -713,7 +734,7 @@
               <p class="vote__text">
                 Отправь нам свои голоса, чтобы они были учтены
               </p>
-              <button class="vote__btn">ОТПРАВИТЬ ГОЛОСА</button>
+              <button class="vote__btn js-vote__btn">ОТПРАВИТЬ ГОЛОСА</button>
             </div>
           </div>
         </form>

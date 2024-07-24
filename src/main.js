@@ -10,6 +10,11 @@ document
     document.body.classList.toggle('hidden');
   });
 
+document.querySelector('.js-vote__btn').addEventListener('click', function (e) {
+  e.preventDefault();
+  document.querySelector('.js-send').classList.toggle('active');
+});
+
 // const anchors = document.querySelectorAll('a[href*="#"]');
 
 // for (let anchor of anchors) {

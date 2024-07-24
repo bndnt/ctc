@@ -240,12 +240,15 @@
 .item .item__btn :hover {
   box-shadow: 0 0 6px 0 #5cebff, 0 0 42px 0 #5cebff, 0 0 254px 0 #5cebff;
   background: #5cebff;
+  color: var(--bacgr);
 }
+
 .item__btn input {
   display: none;
 }
 .item input:checked ~ .radio__sstyle {
   background-color: var(--aqua);
+  color: var(--bacgr);
 }
 .radio__sstyle {
   cursor: pointer;
@@ -492,6 +495,101 @@
   opacity: 0.15;
   margin-right: -3px;
 }
+.send {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--bacgr);
+  z-index: 10;
+  display: none;
+}
+.send.active {
+  display: block;
+}
+
+.send__wrapper {
+  height: 100vh;
+  position: relative;
+}
+.send__wrapper {
+  position: relative;
+}
+.send__wrapper ::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: -80%;
+  left: -49%;
+  background-image: url(../svg/send-web-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2711px;
+  height: 3237px;
+  z-index: -1;
+}
+.send__contrainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.send__hearts {
+  position: relative;
+  width: 500px;
+  height: 400px;
+}
+.send__heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.send__text {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.06;
+  color: #fff;
+  text-align: center;
+  margin-top: -60px;
+}
+.pulse-1 {
+  animation: heart1 2s infinite;
+  z-index: 5;
+}
+@keyframes heart1 {
+  0% {
+    width: 159px;
+    height: 138px;
+  }
+  50% {
+    width: 169px;
+    height: 148px;
+  }
+  100% {
+    width: 159px;
+    height: 138px;
+  }
+}
+.pulse-2 {
+  animation: heart2 2.2s infinite;
+  z-index: 4;
+}
+@keyframes heart2 {
+  0% {
+    width: 404px;
+    height: 363px;
+  }
+  50% {
+    width: 424px;
+    height: 379px;
+  }
+  100% {
+    width: 404px;
+    height: 363px;
+  }
+}
 
 @media screen and (min-width: 1281px) {
 }
@@ -535,6 +633,58 @@
   }
 }
 @media screen and (max-width: 991px) {
+  .hero__btn {
+    position: relative;
+  }
+  .hero__btn:hover,
+  .hero__btn:active {
+    box-shadow: none;
+  }
+  .hero__btn::after {
+    display: block;
+    opacity: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(13, 2, 13, 0.2);
+    transition: all 0.3s linear;
+  }
+  .hero__btn:hover::after,
+  .hero__btn:active::after {
+    opacity: 1;
+  }
+
+  .vote__btn {
+    position: relative;
+  }
+  .vote__btn:hover,
+  .vote__btn:active {
+    box-shadow: none;
+  }
+  .vote__btn::after {
+    display: block;
+    opacity: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(13, 2, 13, 0.2);
+    transition: all 0.3s linear;
+  }
+  .vote__btn:hover::after,
+  .vote__btn:active::after {
+    opacity: 1;
+  }
+  .item .item__btn :hover {
+    box-shadow: none;
+    background: #5cebff;
+    background-color: rgb(92, 235, 255);
+  }
   .hero__right {
     width: 1600px;
     height: 1600px;
