@@ -13,6 +13,7 @@ document
 document.querySelector('.js-vote__btn').addEventListener('click', function (e) {
   e.preventDefault();
   document.querySelector('.js-send').classList.toggle('active');
+  document.body.classList.toggle('hidden');
 });
 
 document.querySelectorAll('.list').forEach(list => {
