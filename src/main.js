@@ -29,6 +29,10 @@ document.querySelector('.js-vote__btn').addEventListener('click', function (e) {
 //     });
 //   });
 // }
+// $('.hero__right').css(
+//   'transform',
+//   'matrix(' + zoom + ',0,0,' + zoom + ',' + -left + ',' + -top + ')'
+// );
 
 document.querySelectorAll('.list').forEach(list => {
   list.querySelectorAll('input[type="radio"]').forEach(radio => {

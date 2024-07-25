@@ -44,7 +44,22 @@
           <span></span>
         </a>
       </div>
-      <div class="hero__right"></div>
+      <div class="hero__right js-hero__right">
+        <picture>
+          <source
+            srcset="./svg/web_hero.png 1x, ./svg/web_hero.png 2x"
+            media="(min-width:992px)"
+            type="image/png"
+          />
+          <source
+            srcset="./svg/mob_hero.png 1x, ./svg/mob_hero.png 2x"
+            media="(max-width:991px)"
+            type="image/png"
+          />
+
+          <img src="./svg/web_hero.png" alt="moi" />
+        </picture>
+      </div>
       <section style="overflow-x: hidden" class="hero">
         <div class="section__wrapper">
           <div class="top__hamburger">
@@ -787,7 +802,12 @@
     </footer>
 
     <!-- Loads the specified .html file -->
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
