@@ -15,25 +15,6 @@ document.querySelector('.js-vote__btn').addEventListener('click', function (e) {
   document.querySelector('.js-send').classList.toggle('active');
 });
 
-// const anchors = document.querySelectorAll('a[href*="#"]');
-
-// for (let anchor of anchors) {
-//   anchor.addEventListener('click', function (e) {
-//     e.preventDefault();
-
-//     const blockID = anchor.getAttribute('href').substr(1);
-
-//     document.getElementById('anchor').scrollIntoView({
-//       behavior: 'smooth',
-//       block: 'start',
-//     });
-//   });
-// }
-// $('.hero__right').css(
-//   'transform',
-//   'matrix(' + zoom + ',0,0,' + zoom + ',' + -left + ',' + -top + ')'
-// );
-
 document.querySelectorAll('.list').forEach(list => {
   list.querySelectorAll('input[type="radio"]').forEach(radio => {
     radio.addEventListener('change', event => {
