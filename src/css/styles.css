@@ -160,6 +160,7 @@
   position: relative;
   background-color: #12002a;
   overflow: hidden;
+  transition: all 0.1s linear;
 }
 .item::before {
   position: absolute;
@@ -263,9 +264,7 @@
   box-shadow: 0 0 6px 0 #5cebff, 0 0 12px 0 #5cebff, 0 0 42px 0 #5cebff,
     0 0 254px 0 #5cebff;
   background: #12002a, rgba(92, 235, 255, 0.55), rgba(64, 0, 169, 0.4), #4000a9;
-}
 
-.item.active {
   background-image: url(../svg/card-active.png);
   background-size: cover;
 }
@@ -551,7 +550,7 @@
   margin-top: -60px;
 }
 .pulse-1 {
-  animation: heart1 2s infinite;
+  animation: heart1 0.8s infinite;
   z-index: 5;
 }
 @keyframes heart1 {
@@ -569,7 +568,7 @@
   }
 }
 .pulse-2 {
-  animation: heart2 2.2s infinite;
+  animation: heart2 1s infinite;
   z-index: 4;
 }
 @keyframes heart2 {
@@ -584,6 +583,29 @@
   100% {
     width: 404px;
     height: 363px;
+  }
+}
+
+.p1,
+.p2,
+.p3 {
+  opacity: 0;
+  display: inline-block;
+  font-size: 24px;
+  animation: fadeIn 2s forwards;
+}
+
+.p2 {
+  animation-delay: 0.5s;
+}
+
+.p3 {
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }
 
@@ -735,6 +757,7 @@
   .title__first {
     font-size: 31px;
     line-height: 1.06;
+    max-width: 299px;
   }
 
   .hero {
@@ -747,10 +770,14 @@
     height: 863px;
     top: -252px;
     left: calc(100vw / 2 + -145px);
-    z-index: -1;
+    z-index: 0;
   }
+
   .hero__flex {
-    padding: 235px 0 47px;
+    padding: 235px 0 0;
+  }
+  .all-sections {
+    padding-top: 60px;
   }
   .hero__text {
     font-size: 16px;
@@ -762,10 +789,19 @@
     margin-top: 37px;
     font-size: 16px;
   }
+  .hero__title {
+    z-index: 3;
+  }
   .subtitle {
     font-size: 16px;
     letter-spacing: 0.05em;
     margin-bottom: 6px;
+    position: relative;
+    z-index: 1;
+  }
+  .nomination__title {
+    position: relative;
+    z-index: 1;
   }
   .mobile__menu {
     top: 22px;
