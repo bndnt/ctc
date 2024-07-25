@@ -350,7 +350,7 @@
 .item.active {
   box-shadow: 0 0 6px 0 #5cebff, 0 0 12px 0 #5cebff, 0 0 42px 0 #5cebff,
     0 0 254px 0 #5cebff;
-  background: #12002a, rgba(92, 235, 255, 0.55), rgba(64, 0, 169, 0.4), #4000a9;
+  /* background: #12002a, rgba(92, 235, 255, 0.55), rgba(64, 0, 169, 0.4), #4000a9; */
 
   background-image: url(../svg/card-active.png);
   background-size: cover;
@@ -781,6 +781,9 @@
   .vote__btn:hover::after,
   .vote__btn:active::after {
     opacity: 1;
+  }
+  .item {
+    transition: all 0.05s linear;
   }
   .item .item__btn :hover {
     box-shadow: none;
