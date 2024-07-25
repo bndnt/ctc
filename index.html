@@ -12,8 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ctc</title>
     
-    <script type="module" crossorigin src="/ctc/assets/main-a273d2e3.js"></script>
-    <link rel="stylesheet" href="/ctc/assets/main-27cdb6b1.css">
+    <script type="module" crossorigin src="/ctc/assets/main-9e3944bb.js"></script>
+    <link rel="stylesheet" href="/ctc/assets/main-17b81844.css">
   </head>
   <body>
     <div class="bg-popup"></div>
@@ -46,7 +46,22 @@
           <span></span>
         </a>
       </div>
-      <div class="hero__right"></div>
+      <div class="hero__right js-hero__right">
+        <picture>
+          <source
+            srcset="/ctc/assets/web_hero-7174f571.png 1x, /ctc/assets/web_hero-7174f571.png 2x"
+            media="(min-width:992px)"
+            type="image/png"
+          />
+          <source
+            srcset="/ctc/assets/mob_hero-c51dc1d0.png 1x, /ctc/assets/mob_hero-c51dc1d0.png 2x"
+            media="(max-width:991px)"
+            type="image/png"
+          />
+
+          <img src="/ctc/assets/web_hero-7174f571.png" alt="moi" />
+        </picture>
+      </div>
       <section style="overflow-x: hidden" class="hero">
         <div class="section__wrapper">
           <div class="top__hamburger">
@@ -789,7 +804,12 @@
     </footer>
 
     <!-- Loads the specified .html file -->
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     
   </body>
 </html>
