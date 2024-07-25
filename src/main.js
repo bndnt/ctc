@@ -1,21 +1,3 @@
-document
-  .querySelector('#mobile_menu_toggle')
-  .addEventListener('click', function (e) {
-    e.preventDefault();
-    this.classList.toggle('active');
-    document.querySelector('.mobile__menu').classList.toggle('active');
-    document.querySelector('.bg-popup').classList.toggle('active');
-
-    document.querySelector('.top__hamburger').classList.toggle('active');
-    document.body.classList.toggle('hidden');
-  });
-
-document.querySelector('.js-vote__btn').addEventListener('click', function (e) {
-  e.preventDefault();
-  document.querySelector('.js-send').classList.toggle('active');
-  document.body.classList.toggle('hidden');
-});
-
 document.querySelectorAll('.list').forEach(list => {
   list.querySelectorAll('input[type="radio"]').forEach(radio => {
     radio.addEventListener('change', event => {
@@ -39,6 +21,24 @@ document.querySelectorAll('.list').forEach(list => {
       }
     });
   });
+});
+
+document
+  .querySelector('#mobile_menu_toggle')
+  .addEventListener('click', function (e) {
+    e.preventDefault();
+    this.classList.toggle('active');
+    document.querySelector('.mobile__menu').classList.toggle('active');
+    document.querySelector('.bg-popup').classList.toggle('active');
+
+    document.querySelector('.top__hamburger').classList.toggle('active');
+    document.body.classList.toggle('hidden');
+  });
+
+document.querySelector('.js-vote__btn').addEventListener('click', function (e) {
+  e.preventDefault();
+  document.querySelector('.js-send').classList.toggle('active');
+  document.body.classList.toggle('hidden');
 });
 
 document.querySelectorAll('a[href^="#"').forEach(link => {
