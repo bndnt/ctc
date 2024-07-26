@@ -1,9 +1,23 @@
 .merci-block {
-  background-image: url(../svg/merci-bg.svg);
-  background-position: top;
+  background-image: url(../img/merci-bg.png);
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 28px 0 0;
+  padding: 28px 0 284px;
+  position: relative;
+  overflow: hidden;
+}
+.merci-block:after {
+  display: block;
+  content: '';
+  width: 986px;
+  height: 539px;
+  background-image: url(../svg/merci-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: -21%;
+  left: 9%;
 }
 .merci-container {
   margin: 0 auto;
@@ -24,7 +38,20 @@
 }
 .merci-date {
   margin-top: 4px;
+  position: relative;
 }
+.merci-date::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 68px;
+  height: 62px;
+  background-image: url(../svg/merci-date-after.svg);
+  background-repeat: no-repeat;
+  right: -49px;
+  top: 0;
+}
+
 .merci__number {
 }
 .merci__logo {
@@ -81,9 +108,33 @@
   object-fit: cover;
 }
 .footer-merci {
-  margin-top: -140px;
+  /* margin-top: -140px; */
   position: relative;
   z-index: 1;
+}
+@media screen and (max-width: 1100px) {
+  .merci-block::after {
+    left: -2%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .merci-date::after {
+    display: none;
+  }
+  .merci-block:after {
+    display: none;
+  }
+  .merci-block {
+    background-image: url(../svg/merci-bg-mob.svg);
+    background-position-y: 31%;
+  }
+  .merci__title {
+    margin-top: calc(30vh);
+    font-size: 48px;
+  }
+  .merci__logo {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .merci-block {
@@ -117,7 +168,7 @@
     width: 100%;
   }
   .merci-info__cover {
-    margin-top: -253px;
+    /* margin-top: -253px; */
   }
   .merci__image {
     margin-top: 0;
@@ -126,10 +177,7 @@
     margin-top: 0;
   }
   .merci-block {
-    background-image: none;
     position: relative;
-    overflow: hidden;
-    padding-bottom: 109px;
   }
   .merci-block:before {
     display: block;
@@ -137,10 +185,6 @@
     position: absolute;
     width: 2038px;
     height: 2187px;
-    background-image: url(../svg/merci-bg-mob.svg);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
     z-index: -1;
     left: -1146px;
     top: -416px;

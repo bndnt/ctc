@@ -24,9 +24,10 @@
   content: '';
   position: absolute;
   background-image: url(../svg/BG-main.svg);
+  background-repeat: no-repeat;
   width: 4419px;
   height: 10177px;
-  top: -419px;
+  top: -307px;
   left: -1529px;
 }
 @media screen and (min-width: 1281px) {
@@ -150,7 +151,7 @@
   justify-content: center;
   gap: 28px;
   flex-wrap: wrap;
-  padding-bottom: 139px;
+  padding-bottom: 167px;
 }
 .item {
   width: 299px;
@@ -167,6 +168,8 @@
   content: '';
   display: block;
   background-image: url(../svg/card-before.svg);
+  background-repeat: no-repeat;
+
   width: 902px;
   height: 1050px;
   top: -273px;
@@ -178,6 +181,8 @@
   width: 268px;
   height: 252px;
   background-image: url(../svg/back-person.svg);
+  background-repeat: no-repeat;
+
   background-size: contain;
   z-index: 0;
   position: absolute;
@@ -285,6 +290,8 @@
 }
 .nomination.collab .item::after {
   background-image: url(../svg/back-collab.svg);
+  background-repeat: no-repeat;
+
   width: 270px;
   height: 252px;
 }
@@ -350,14 +357,14 @@
 .item.active {
   box-shadow: 0 0 6px 0 #5cebff, 0 0 12px 0 #5cebff, 0 0 42px 0 #5cebff,
     0 0 254px 0 #5cebff;
-  /* background: #12002a, rgba(92, 235, 255, 0.55), rgba(64, 0, 169, 0.4), #4000a9; */
+  background-repeat: no-repeat;
 
   background-image: url(../svg/card-active.png);
   background-size: cover;
 }
 
 .vote {
-  padding: 148px 0 104px;
+  padding: 140px 0 115px;
   position: relative;
 }
 .vote::after {
@@ -366,10 +373,12 @@
   content: '';
   right: calc(100% / 10 - 19%);
   left: auto;
-  top: 119px;
+  top: 113px;
   width: 433px;
   height: 493px;
   background-image: url(../svg/vote-right.svg);
+  background-repeat: no-repeat;
+
   background-size: contain;
   z-index: -1;
 }
@@ -378,29 +387,32 @@
   display: block;
   content: '';
   left: calc(100% / 10 - 20%);
-  top: 166px;
+  top: 125px;
   width: 405px;
   height: 441px;
   background-image: url(../svg/vote__left.svg);
+  background-repeat: no-repeat;
+
   background-size: contain;
   z-index: -1;
 }
 .vote__text {
-  font-weight: 400;
-  font-size: 22px;
+  font-weight: 900;
+  font-size: 48px;
   line-height: 1.06;
-  color: #fff;
-  margin-top: 16px;
+  text-transform: uppercase;
   text-align: center;
+  color: #fff;
+  max-width: 900px;
+  margin: 0 auto;
 }
 .vote__btn {
   font-family: 'Montserrat', sans-serif;
-
   display: block;
-  margin: 51px auto 0;
+  margin: 33px auto 0;
   border-radius: 14px;
   padding: 15px 50px;
-  width: 303px;
+  width: 219px;
   font-weight: 700;
   font-size: 17px;
   line-height: 1;
@@ -426,7 +438,7 @@
   height: 31px;
   left: auto;
   right: calc(100% / 2 - 42%);
-  bottom: 18%;
+  bottom: -9%;
 }
 .lubimka:before {
   display: block;
@@ -438,7 +450,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   left: calc(100% / 2 - 45%);
-  bottom: -7%;
+  bottom: -4%;
 }
 .artist {
   position: relative;
@@ -455,7 +467,7 @@
   background-size: contain;
   left: auto;
   right: calc(100% / 2 - 62%);
-  top: 15%;
+  top: 39%;
 }
 .clip {
   position: relative;
@@ -470,7 +482,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   left: calc(100% / 2 - 60%);
-  bottom: 36px;
+  bottom: 150px;
 }
 .collab {
   position: relative;
@@ -485,7 +497,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   left: calc(100% / 2 - 47%);
-  bottom: 100px;
+  bottom: 25%;
 }
 .footer {
   padding: 45px 0 18px;
@@ -585,6 +597,10 @@
   background-color: var(--bacgr);
   z-index: 10;
   display: none;
+  background-image: url(../img/send-web-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 .send.active {
   display: block;
@@ -597,19 +613,7 @@
 .send__wrapper {
   position: relative;
 }
-.send__wrapper ::after {
-  display: block;
-  content: '';
-  position: absolute;
-  top: -80%;
-  left: -49%;
-  background-image: url(../svg/send-web-bg.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 2711px;
-  height: 3237px;
-  z-index: -1;
-}
+
 .send__contrainer {
   display: flex;
   flex-direction: column;
@@ -733,6 +737,10 @@
     width: 380px;
     height: 410px;
   }
+  .vote__text {
+    font-size: 44px;
+    max-width: 74%;
+  }
 }
 @media screen and (max-width: 991px) {
   .hero__btn {
@@ -782,6 +790,10 @@
   .vote__btn:active::after {
     opacity: 1;
   }
+  .vote__text {
+    font-size: 42px;
+    max-width: 73%;
+  }
   .item {
     transition: all 0.05s linear;
   }
@@ -824,10 +836,59 @@
   .header__link {
     text-align: center;
   }
+  .send {
+    background-image: url(../img/send-tabl-bg.png);
+  }
 }
 @media screen and (max-width: 768px) {
   .container {
     padding: 0 5px 0 1px;
+  }
+  .send {
+    background-image: url(../img/send-tabl-bg.png);
+  }
+  .send__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.06;
+    color: #fff;
+    margin-top: -104px;
+  }
+  .pulse-1 {
+    animation: heart1 0.8s infinite;
+    z-index: 5;
+  }
+  @keyframes heart1 {
+    0% {
+      width: 96px;
+      height: 84px;
+    }
+    50% {
+      width: 106px;
+      height: 96px;
+    }
+    100% {
+      width: 96px;
+      height: 84px;
+    }
+  }
+  .pulse-2 {
+    animation: heart2 1s infinite;
+    z-index: 4;
+  }
+  @keyframes heart2 {
+    0% {
+      width: 254px;
+      height: 230px;
+    }
+    50% {
+      width: 279px;
+      height: 249px;
+    }
+    100% {
+      width: 254px;
+      height: 230px;
+    }
   }
   .artist:before {
     display: none;
@@ -935,10 +996,12 @@
     padding: 76px 0 71px;
   }
   .vote__text {
-    font-size: 16px;
-    line-height: 1.26;
-    margin: 12px auto 0;
-    max-width: 85%;
+    font-size: 24px;
+    line-height: 1.06;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    max-width: 250px;
   }
   .vote__btn {
     font-size: 16px;
@@ -946,13 +1009,13 @@
     margin: 29px 2px 0 14px;
   }
   .vote::before {
-    width: 110px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     top: 72px;
   }
   .vote::after {
-    width: 117px;
-    height: 133px;
+    width: 140px;
+    height: 160px;
     right: -4px;
     top: 70px;
   }
@@ -1011,5 +1074,23 @@
 }
 @media screen and (max-width: 740px) {
   .footer__right {
+  }
+}
+@media screen and (max-width: 650px) {
+  .vote::before {
+    width: 110px;
+    height: 120px;
+    top: 72px;
+  }
+  .vote::after {
+    width: 117px;
+    height: 133px;
+    right: -4px;
+    top: 70px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .send {
+    background-image: url(../img/send_BG_mob.png);
   }
 }
