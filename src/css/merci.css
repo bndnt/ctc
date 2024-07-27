@@ -126,11 +126,13 @@
   }
   .merci-block {
     background-image: url(../svg/merci-bg-mob.svg);
-    background-position-y: 31%;
+    background-position-y: 19%;
+    padding-bottom: 150px;
   }
   .merci__title {
     margin-top: calc(30vh);
     font-size: 48px;
+    max-width: 85%;
   }
   .merci__logo {
     display: none;
@@ -139,6 +141,8 @@
 @media screen and (max-width: 768px) {
   .merci-block {
     padding-top: 7px;
+    background-position-y: 15%;
+    padding-bottom: 100px;
   }
   .merci-container {
     padding: 0 10px;
@@ -153,23 +157,21 @@
     display: none;
   }
   .merci__title {
-    font-size: 26px;
-    line-height: 1.06;
-    margin-top: 110px;
-    max-width: 90%;
+    margin-top: calc(28vh);
+    font-size: 42px;
+    max-width: 76%;
   }
+
   .merci__text {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.24;
     margin: 17px 0 31px;
   }
   .merci__btn {
     width: 100%;
   }
-  .merci-info__cover {
-    /* margin-top: -253px; */
-  }
+
   .merci__image {
     margin-top: 0;
   }
@@ -197,5 +199,29 @@
   }
   .merci__btn {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .merci__title {
+    max-width: 94%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .merci__title {
+    font-size: 26px;
+    line-height: 1.06;
+    margin-top: calc(9.5vh);
+    max-width: 271px;
+  }
+  .merci__text {
+    font-weight: 500;
+    font-size: 14px;
+    max-width: 293px;
+  }
+  .merci__flex {
+    margin-top: 18px;
+  }
+  .footer-merci {
+    padding-top: 54px !important;
   }
 }
