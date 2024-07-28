@@ -5,6 +5,28 @@
   background-color: rgb(255, 0, 153, 0.25);
 }
 header {
+  width: 100%;
+  position: fixed;
+  top: 28px;
+  max-width: 1234px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  backdrop-filter: blur(50px);
+  border-radius: 20px;
+  -webkit-backdrop-filter: blur(50px);
+  -webkit-font-smoothing: antialiased;
+}
+@media screen and (max-width: 1270px) {
+  header {
+    width: calc(100vw - 30px);
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    top: 7px;
+  }
 }
 .nav {
   display: flex;
@@ -52,6 +74,7 @@ header {
   border-radius: 13px;
   padding: 8px 37px 9px 37px;
   background-color: white;
+  text-transform: uppercase;
 }
 
 .header__link:hover {
@@ -61,7 +84,7 @@ header {
 
 /* hamb */
 .mobile__menu {
-  position: absolute;
+  position: fixed;
   z-index: 8;
   top: 48px;
   left: auto;

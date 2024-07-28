@@ -3,7 +3,7 @@
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 28px 0 284px;
+  padding: 95px 0 284px;
   position: relative;
   overflow: hidden;
 }
@@ -18,10 +18,11 @@
   position: absolute;
   bottom: -21%;
   left: 9%;
+  z-index: 0;
 }
 .merci-container {
   margin: 0 auto;
-  padding: 0 15px 0 22px;
+  padding: 0 11px 0 27px;
   width: 100%;
   max-width: 884px;
 }
@@ -62,6 +63,10 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.merci-info {
+  position: relative;
+  z-index: 1;
 }
 .merci__title {
   font-weight: 900;
@@ -112,6 +117,16 @@
   position: relative;
   z-index: 1;
 }
+@media screen and (min-width: 1440px) {
+  .merci-block::after {
+  }
+}
+@media screen and (min-width: 1281px) {
+  .merci-block::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
 @media screen and (max-width: 1100px) {
   .merci-block::after {
     left: -2%;
@@ -140,7 +155,7 @@
 }
 @media screen and (max-width: 768px) {
   .merci-block {
-    padding-top: 7px;
+    padding-top: 59px;
     background-position-y: 15%;
     padding-bottom: 100px;
   }
@@ -210,7 +225,7 @@
   .merci__title {
     font-size: 26px;
     line-height: 1.06;
-    margin-top: calc(9.5vh);
+    margin-top: calc(11.5vh);
     max-width: 271px;
   }
   .merci__text {
@@ -223,5 +238,13 @@
   }
   .footer-merci {
     padding-top: 54px !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  .merci__title {
+    font-size: 26px;
+    line-height: 1.06;
+    margin-top: calc(11.5vh);
+    max-width: 271px;
   }
 }
