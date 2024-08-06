@@ -225,7 +225,7 @@
   .merci__title {
     font-size: 26px;
     line-height: 1.06;
-    margin-top: calc(11.5vh);
+    margin-top: calc(16.5vh);
     max-width: 271px;
   }
   .merci__text {
@@ -240,7 +240,7 @@
     padding-top: 54px !important;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 375px) {
   .merci__title {
     font-size: 26px;
     line-height: 1.06;

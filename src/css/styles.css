@@ -8,6 +8,7 @@
 @import url('./general.css');
 @import url('./header.css');
 @import url('./merci.css');
+@import url('./bear.css');
 .container__top {
   width: 100%;
   max-width: 1234px;
@@ -19,6 +20,7 @@
   position: relative;
   overflow: hidden;
 }
+
 .body__wrapper:before {
   display: block;
   content: '';
@@ -35,6 +37,11 @@
     top: -419px;
     left: 52%;
     transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .body__wrapper:before {
+    top: 27%;
   }
 }
 
@@ -654,6 +661,7 @@
 .pulse-1 {
   animation: heart1 0.8s infinite;
   z-index: 5;
+  top: 51%;
 }
 @keyframes heart1 {
   0% {
@@ -939,10 +947,10 @@
   }
 
   .hero__flex {
-    padding: 235px 0 0;
+    padding: 288px 0 0;
   }
   .all-sections {
-    padding-top: 60px;
+    padding-top: 46px;
   }
   .hero__text {
     font-size: 16px;
@@ -990,8 +998,8 @@
   }
   .list {
     margin-top: 25px;
-    gap: 20px;
-    padding-bottom: 50px;
+    gap: 30px;
+    padding-bottom: 88px;
   }
   .item {
     transition: none;

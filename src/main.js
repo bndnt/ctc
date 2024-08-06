@@ -23,6 +23,38 @@ document.querySelectorAll('.list').forEach(list => {
   });
 });
 
+//////////
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Функция для проверки, находится ли элемент в области видимости
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Функция для добавления класса с анимацией
+  function handleScroll() {
+    const items = document.querySelectorAll('.item.bear');
+    items.forEach(item => {
+      if (isInViewport(item)) {
+        item.classList.add('animate');
+      }
+    });
+  }
+
+  // Обработчик события прокрутки
+  window.addEventListener('scroll', handleScroll);
+
+  // Проверяем при загрузке, чтобы анимация запускалась, если элемент уже в области видимости
+  handleScroll();
+});
+
 document
   .querySelector('#mobile_menu_toggle')
   .addEventListener('click', function (e) {
