@@ -9,6 +9,7 @@
 @import url('./header.css');
 @import url('./merci.css');
 @import url('./bear.css');
+@import url('./final.css');
 .container__top {
   width: 100%;
   max-width: 1234px;

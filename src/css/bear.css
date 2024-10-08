@@ -36,8 +36,6 @@
   }
 }
 
-.cloud-text {
-}
 .cloud-text::before {
   position: absolute;
   display: block;
