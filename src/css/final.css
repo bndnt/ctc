@@ -38,7 +38,7 @@
     left: calc(100vw / 2 - 10%) !important;
   }
 }
-@media (max-width: 2229) {
+@media (max-width: 2229px) {
   .final-page .final__hero-img {
     left: calc(100vw / 4 + 26px);
   }
